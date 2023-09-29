@@ -1,0 +1,235 @@
+
+// import concept
+// import {apikey1,apikey2} from "./util.js";
+// import ddfault from "./util.js";
+// import * as util from "./util.js";
+// console.log(apikey1);
+// console.log(apikey2);
+// console.log(ddfault);
+// console.log(util.apikey1);
+
+// // variables
+// const pi=3.14;
+// console.log(pi);
+
+// // operators
+// console.log("ghanasyam" +" raveendran");
+// //  === return true or false
+// console.log(1===2);
+
+// functions
+
+// function greetings(name,message="hai"){
+//   // console.log(message,name);
+//   return message+" "+name +"!!";
+// }
+
+// console.log(greetings("shyam","hey"));
+// let greet2=greetings("arya");
+// console.log(greet2);
+
+
+// arrow function
+// similar to lambda function 
+// no function name and return is needed
+
+// let sum=(a,b)=>a+b;
+// console.log(sum(10,20));
+
+// invalid
+// let sum2=(a,b)=>if(a>b) a+b;
+// console.log(sum(10,20));
+
+// invalid
+// let sum2=(a,b)=>return a+b;
+// console.log(sum(10,20));
+
+// class and objects
+
+// without class keyword we can group variables and functions
+
+// let User={
+//   name:"ghanasyam",
+//   age:25,
+//   greet(){
+//     console.log(this.name);
+//   }
+// }
+
+// console.log(User)
+// User.greet();
+
+
+// with class keyword
+// class User {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//     display() {
+//     console.log(this.name, this.age);
+//   }
+// }
+// let user=new User("shyam",25);
+// user.display();
+
+
+// array and aray functions
+
+// const hobbiess=[["food","games","reading"],["study","chess"]];
+// console.log(hobbiess[0][0]);
+
+// const hobbies=["food","games","reading"];
+// console.log(hobbies.length);
+
+// // to push a new value
+// hobbies.push("dancing");
+// console.log(hobbies);
+
+
+// // adding ! to every item
+// // map takes each item and transforms to new 
+// const updatedhobbies1= hobbies.map((item)=> (item +" !"));
+// console.log(updatedhobbies1);
+
+// // map takes each item and transforms to new key value setup
+// const updatedhobbies2= hobbies.map((item)=> ({hobby:item}));
+// console.log(updatedhobbies2);
+// console.log(updatedhobbies2[0].hobby);
+
+// // to find index of specific item
+// const index=hobbies.findIndex((item)=> item==="food" );
+// console.log(index);
+
+// destructring is an easy syntax for assigning array values to variables
+// array destructing
+// const names=["ghanasyam","raveendran"];
+// let fname=names[0];
+// let lname=names[1];
+// console.log(fname,lname);
+
+// // this can be done in an easy syntax
+
+// const [firstName,lastName]=["ghanasyam","raveendran"];
+// console.log(firstName,lastName);
+
+// // same can be done with dictionary
+// const {name,age}={
+//   name:"ghanasyam",
+//   age:25,
+// }
+// console.log(name,age);
+
+
+// spread operator(...)=>to merge array and dict
+// const players1=["messi","ronaldo"]
+// const players2=["neymar"]
+// const mergedList=[...players1,...players2]
+// console.log(mergedList);
+// console.log(["chetri",...mergedList]);
+
+
+// const player={
+//   name:"messi",
+//   country:"Argentina"
+// }
+
+// const club={
+//   club:"PSG"
+// }
+
+// const mergedDict={
+//   ...player,
+//   ...club,
+//   "WC":1
+// }
+
+// console.log(mergedDict);
+
+
+// for..of loop in js to iterate over an array
+// let numbers=[1,2,3,4,5]
+// for(let num of numbers){
+//   console.log(num)
+// }
+
+
+// function as value
+// a function is passed as an argument of another function
+
+// function message(){
+//   console.log("time is up...");
+// }
+
+// // function as value in case of builtin function
+// setTimeout(message,3000);
+
+// setTimeout(()=>{console.log("Time over..")},4000)
+
+
+// // function as value in case of user defined function
+// function example(fun){
+//   fun();
+// }
+
+// function passedFun(){
+//   console.log("This fun is the argument");
+// }
+
+// example(message);
+// example(passedFun);
+// example(()=>{console.log("Passed fun is an arrow fun")});
+
+
+// function definded inside another function
+
+// function outerfun(){
+//   console.log("outer executed");
+//   function innerfun(){
+//     console.log("inner executed");
+//   }
+//   innerfun();
+// }
+
+// outerfun();
+
+
+// summary extras
+// inheritance
+
+// class Person{
+//   constructor(){
+//  this.name="ghanasyam";
+//   }
+   
+//    display(){
+//     console.log(this.name);
+
+//    }
+// }
+
+// class Student extends Person{
+//   constructor(){
+//     super();
+//      this.marks=90;
+//   }
+
+//   display(){
+//     console.log(this.marks);
+//     super.display();
+
+//    }
+// }
+
+// const student=new Student();
+// student.display();
+
+// example of destructuring
+// function sample({name,age}){
+//   console.log(name,age);
+// }
+
+// sample({
+//   name:"shaym",
+//   age:25
+// })
